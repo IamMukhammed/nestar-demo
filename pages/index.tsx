@@ -42,7 +42,9 @@ export default function Home() {
           </ol>
 
           <div className={styles.ctas}>
-            <a
+          <h1> HELLO WORLD, HELLO MIT - 20... 😊 || </h1>
+          <h1> PAGES ROUTER </h1>
+            {/* <a
               className={styles.primary}
               href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
@@ -64,7 +66,7 @@ export default function Home() {
               className={styles.secondary}
             >
               Read our docs
-            </a>
+            </a> */}
           </div>
         </main>
         <footer className={styles.footer}>
