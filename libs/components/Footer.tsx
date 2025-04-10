@@ -33,7 +33,7 @@ const Footer = () => {
                 </Stack>
                 <Stack className="right">
                     <Box component={"div"} className="top">
-                        <strong>Keep yourself up-to-date</strong>
+                        <strong>Keep yourself up to date</strong>
                         <div>
                             <input type="text" placeholder="Your Email" />
                             <span>Subscribe</span>
