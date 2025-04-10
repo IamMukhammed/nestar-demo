@@ -39,7 +39,7 @@ const Footer = () => {
                             <span>Subscribe</span>
                         </div>
                     </Box>
-                    <Box component={"div"} className="bottom">
+                    <Box component={"div"} className="button">
                         <div>
                             <strong>Popular Search</strong>
                             <span>Property for Rent</span>
