@@ -12,22 +12,22 @@ const withLayoutMain = (Component: any) => {
                     <title>Nestar</title>
                 </Head>
                 <Stack id="pc-wrap">
-                <Stack id={"top"}>
-                    <Top />
-                </Stack>
-                <Stack className={"header-main"}>
-                    <Stack className={"container"}>
-                        <HeaderFilter />
+                    <Stack id={"top"}>
+                        <Top />
                     </Stack>
-                </Stack>
+                    <Stack className={"header-main"}>
+                        <Stack className={"container"}>
+                            <HeaderFilter />
+                        </Stack>
+                    </Stack>
 
-                <Stack id={"main"}>
-                    <Component {...props} />
-                </Stack>
+                    <Stack id={"main"}>
+                        <Component {...props} />
+                    </Stack>
 
-                <Stack id={"footer"}>
-                    <Footer />
-                </Stack>
+                    <Stack id={"footer"}>
+                        <Footer />
+                    </Stack>
                 </Stack>
             </>
         );
