@@ -12,14 +12,13 @@ import {
     Tooltip, 
     IconButton 
 } from "@mui/material";
-import { propertySquare } from "../../config";
+// import { propertySquare } from "../../config";
 import RefreshIcon from "@mui/icons-material/Refresh";
-import { start } from "repl";
 
 const Filter = () => {
     const [ searchText, setSearchText ] = useState<string>("");
     const [ showMore, setShowMore ] = useState<boolean>(false);
-    const [ propertySquare, setPropertySquare ] = useState({
+    const [ propertyPrice, setPropertyPrice ] = useState({
         start: 0,
         end: 250000,
     });
@@ -44,6 +43,7 @@ const Filter = () => {
                     </Tooltip>
                 </Stack>
             </Stack>
+            
             <Stack className={"find-your-home"} mb={"30px"}>
                 <p className={"title"} style={{ textShadow: "0px 3px 4px #b9b9b9" }}>
                     Location
@@ -71,6 +71,7 @@ const Filter = () => {
                     })}
                 </Stack>
             </Stack>
+            
             <Stack className={"find-your-home"} mb={"30px"}>
                 <Typography className={"title"}>Property Type</Typography>
                 {["APARTMENT", "HOUSE", "VILLA"].map((type: string) => (
@@ -88,6 +89,7 @@ const Filter = () => {
                     </Stack>
                 ))}
             </Stack>
+            
             <Stack className={"find-your-home"} mb={"30px"}>
                 <Typography className={"title"}>Rooms</Typography>
                 <Stack className={"button-group"}>
@@ -141,8 +143,9 @@ const Filter = () => {
                     </Button>
                 </Stack>
             </Stack>
+            
             <Stack className={"find-your-home"} mb={"30px"}>
-            <Typography className={"title"}>Bedrooms</Typography>
+                <Typography className={"title"}>Bedrooms</Typography>
                 <Stack className={"button-group"}>
                     <Button
                         sx={{
@@ -194,6 +197,7 @@ const Filter = () => {
                     </Button>
                 </Stack>        
             </Stack>
+           
             <Stack className={"find-your-home"} mb={"30px"}>
                 <Typography className={"title"}>Option</Typography>
                 <Stack className={"input-box"}>
@@ -221,6 +225,7 @@ const Filter = () => {
                     </label>
                 </Stack>
             </Stack>
+            
             <Stack className={"find-your-home"} mb={"30px"}>
                <Typography className={"title"}>Square Meter</Typography>
                <Stack className={"square-year-input"}>
@@ -232,11 +237,11 @@ const Filter = () => {
                         value={0}
                         label="Min"
                     >
-                        {propertySquare.map((square: number) => (
+                        {/* {propertySquare.map((square: number) => (
                             <MenuItem value={square} key={square}>
                                 {square}
                             </MenuItem>
-                        ))}
+                        ))} */}
                     </Select>
                 </FormControl>
                 <div className={"central-divider"}></div>
@@ -248,15 +253,16 @@ const Filter = () => {
                         value={500}
                         label="Max"
                     >
-                        {propertySquare.map((square: number) => (
+                        {/* {propertySquare.map((square: number) => (
                             <MenuItem value={square} key={square}>
                                 {square}
                             </MenuItem>
-                        ))}
+                        ))} */}
                     </Select>
                 </FormControl>
                </Stack>
             </Stack>
+            
             <Stack className={"find-your-home"} mb={"30px"}>
                 <Typography className={"title"}>Price Range</Typography>
                 <Stack className={"square-year-input"}>
@@ -268,7 +274,7 @@ const Filter = () => {
                         onChange={(e: any) => {
                             console.log("value: ", e.target.value);
                             if (e.target.value >= 0) {
-                                setProeprtyPrice({ ...proeprtyPrice, start: e.target.value });
+                                setPropertyPrice({ ...propertyPrice, start: e.target.value });
                             }
                         }}
                     />
@@ -280,7 +286,7 @@ const Filter = () => {
                         onChange={(e: any) => {
                             console.log("value: ", e.target.value);
                             if (e.target.value >= 0) {
-                                setpropertyPrice({ ...propertyPrice, end: e.target.value });
+                                setPropertyPrice({ ...propertyPrice, end: e.target.value });
                             }
                         }}
                     />
