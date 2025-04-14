@@ -12,7 +12,7 @@ import {
     Tooltip, 
     IconButton 
 } from "@mui/material";
-// import { propertySquare } from "../../config";
+import { propertySquare } from "../../config";
 import RefreshIcon from "@mui/icons-material/Refresh";
 
 const Filter = () => {
@@ -237,11 +237,11 @@ const Filter = () => {
                         value={0}
                         label="Min"
                     >
-                        {/* {propertySquare.map((square: number) => (
+                        {propertySquare.map((square: number) => (
                             <MenuItem value={square} key={square}>
                                 {square}
                             </MenuItem>
-                        ))} */}
+                        ))}
                     </Select>
                 </FormControl>
                 <div className={"central-divider"}></div>
@@ -253,11 +253,11 @@ const Filter = () => {
                         value={500}
                         label="Max"
                     >
-                        {/* {propertySquare.map((square: number) => (
+                        {propertySquare.map((square: number) => (
                             <MenuItem value={square} key={square}>
                                 {square}
                             </MenuItem>
-                        ))} */}
+                        ))}
                     </Select>
                 </FormControl>
                </Stack>
